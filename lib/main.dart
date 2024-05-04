@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:tm_10/pages/add_color_page.dart';
 import 'package:tm_10/pages/application_lifecycle.dart';
 import 'package:tm_10/pages/checkbox.dart';
+import 'package:tm_10/pages/dropdown_page.dart';
 import 'package:tm_10/pages/future_builder.dart';
 import 'package:tm_10/pages/add_product_page.dart';
 import 'package:tm_10/pages/key.dart';
@@ -27,6 +28,7 @@ class _MyAppState extends State<MyApp> {
     const FutureBuilderApp(),
     KeyPage(),
     const CheckboxPage(),
+    const DropdownPage()
   ];
 
   void _onItemTapped(int index) {
@@ -67,9 +69,14 @@ class _MyAppState extends State<MyApp> {
                 icon: Icon(Icons.person),
                 label: '54',
               ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                label: '55',
+              ),
             ],
             currentIndex: _selectedIndex,
             selectedItemColor: Colors.amber[800],
+            unselectedItemColor: Colors.grey,
             onTap: _onItemTapped,
           ),
         ),
